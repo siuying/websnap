@@ -21,8 +21,6 @@ class WebSnap
     @stylesheets = []
 
     default_options = {
-      :'crop-w' => '1024',
-      :'crop-h' => '768',
       :'scale-w' => '120',
       :'scale-h' => '90',
       :'format' => 'png'
