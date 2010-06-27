@@ -57,12 +57,12 @@ class WebSnap
   end
   
   def to_file(path)
-    File.open(path,'w') {|file| file << self.to_pdf}
+    File.open(path,'w') {|file| file << self.to_bytes}
   end
   
   protected
   
-    def wkhtmltopdf
+    def wkhtmltoimage
       @wkhtmltoimage ||= `which wkhtmltoimage-proxy`.chomp
     end
   
