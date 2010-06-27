@@ -21,8 +21,12 @@ class WebSnap
     @stylesheets = []
 
     default_options = {
-      :'scale-w' => '120',
       :'scale-h' => '90',
+      :'scale-w' => '120',
+      :'crop-h' => '768',
+      :'crop-w' => '1024',
+      :'crop-x' => '0',
+      :'crop-y' => '0',
       :'format' => 'png'
     }
     @options = normalize_options(default_options.merge(options))
