@@ -5,11 +5,13 @@ Create snapshot of webpage. Uses [wkhtmltoimage](http://github.com/antialize/wkh
 ## Installation
 
 1. Install wkhtmltoimage (optional)
-** WebSnap comes bundled with wkhtmltoimage binaries for Linux i386 and OS X i386
-** WebSnap defaults to user installed versions of wkhtmltoimage if found
-** Installing wkhtmltoimage binary
-*** Download the latest binary from http://code.google.com/p/wkhtmltopdf/downloads/list
-*** Place the binary somewhere on your path (e.g /usr/local/bin)
+
+  * WebSnap comes bundled with wkhtmltoimage binaries for Linux i386 (OSX i386 will be bundled, when it is available from [wkhtmltopdf] site)
+  * WebSnap defaults to user installed versions of wkhtmltoimage if found
+  * Installing wkhtmltoimage binary
+  * Download the latest binary from http://code.google.com/p/wkhtmltopdf/downloads/list
+  * Place the binary somewhere on your path (e.g /usr/local/bin)
+
 2. Install WebSnap
 
     $ gem install websnap
@@ -21,7 +23,7 @@ Create snapshot of webpage. Uses [wkhtmltoimage](http://github.com/antialize/wkh
     snap = WebSnap.new('http://google.com', :format => 'png')
 
     # Get the binary image data
-    png = snap.bytes
+    png = snap.to_bytes
 
     # Save the PDF to a file
     file = snap.to_file('/path/to/save/png')
@@ -29,6 +31,11 @@ Create snapshot of webpage. Uses [wkhtmltoimage](http://github.com/antialize/wkh
     # WebSnap.new can optionally accept a URL or a File.
     kit = WebSnap.new('http://google.com')
     kit = WebSnap.new(File.new('/path/to/html'))
+
+## Attributions
+
+* This application use wkhtmltoimage as backend
+* This gem is a clone of PDFKit, which use wkhtmltopdf to generate PDF
 
 ## Note on Patches/Pull Requests
  

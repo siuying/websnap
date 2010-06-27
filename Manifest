@@ -5,4 +5,10 @@ Rakefile
 bin/wkhtmltoimage-linux-i386-0.10.0
 bin/wkhtmltoimage-proxy
 lib/websnap.rb
+lib/websnap/source.rb
 lib/websnap/websnap.rb
+spec/fixtures/google.html
+spec/source_spec.rb
+spec/spec_helper.rb
+spec/websnap_spec.rb
+websnap.gemspec
