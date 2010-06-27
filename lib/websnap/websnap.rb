@@ -35,7 +35,6 @@ class WebSnap
   def command
     args = [wkhtmltoimage]
     args += @options.to_a.flatten.compact
-    args << '--quiet'
     
     if @source.html?
       args << '-' # Get HTML from stdin
