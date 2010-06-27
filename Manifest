@@ -1,0 +1,8 @@
+LICENSE
+Manifest
+README.md
+Rakefile
+bin/wkhtmltoimage-linux-i386-0.10.0
+bin/wkhtmltoimage-proxy
+lib/websnap.rb
+lib/websnap/websnap.rb
