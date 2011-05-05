@@ -1,4 +1,4 @@
-class WebSnap
+module WebSnap
   
   class Source
         
