@@ -20,7 +20,7 @@ Create snapshot of webpage. Uses [wkhtmltoimage](http://github.com/antialize/wkh
     
     # WebSnap.new takes the HTML and any options for wkhtmltoimage
     # run `wkhtmltoimage -H` for a full list of options
-    snap = WebSnap.new('http://google.com', :format => 'png')
+    snap = WebSnap::Snapper.new('http://google.com', :format => 'png')
 
     # Get the binary image data
     png = snap.to_bytes
@@ -29,8 +29,8 @@ Create snapshot of webpage. Uses [wkhtmltoimage](http://github.com/antialize/wkh
     file = snap.to_file('/path/to/save/png')
     
     # WebSnap.new can optionally accept a URL or a File.
-    kit = WebSnap.new('http://google.com')
-    kit = WebSnap.new(File.new('/path/to/html'))
+    kit = WebSnap::Snapper.new('http://google.com')
+    kit = WebSnap::Snapper.new(File.new('/path/to/html'))
 
 ## Attributions
 

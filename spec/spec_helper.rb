@@ -4,5 +4,5 @@ $LOAD_PATH.unshift(File.join(SPEC_ROOT, '..', 'lib'))
 
 require 'websnap'
 require 'rubygems'
-require 'spec/rake/spectask'
+require 'rspec/core/rake_task'
 require 'mocha'
