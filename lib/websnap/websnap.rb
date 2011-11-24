@@ -54,6 +54,8 @@ module WebSnap
   
     def to_file(path, image_path=nil)
       append_stylesheets
+      path = File.expand_path(path)
+
       @source = Source.new(@source.to_s.gsub(/images\//, image_path)) unless image_path.nil?
       File.open(path,'w') {|file| file << self.to_bytes}
     end
