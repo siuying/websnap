@@ -22,10 +22,6 @@ module WebSnap
       @stylesheets = []
 
       default_options = {
-        :'crop-h' => '768',
-        :'crop-w' => '1024',
-        :'crop-x' => '0',
-        :'crop-y' => '0',
         :'format' => 'jpg'
       }
       @options = normalize_options(default_options.merge(options))
