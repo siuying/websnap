@@ -2,6 +2,8 @@ LICENSE
 Manifest
 README.md
 Rakefile
+bin/wkhtml_image_executable.rb
+bin/wkhtmltoimage-amd64
 bin/wkhtmltoimage-linux-i386-0.10.0
 bin/wkhtmltoimage-osx-i386-0.10.0
 bin/wkhtmltoimage-proxy
