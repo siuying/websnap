@@ -1,19 +1,11 @@
 #!/usr/bin/env ruby
 
+require File.expand_path(File.dirname(__FILE__) + '/wkhtml_image_executable')
+
 executable = `which wkhtmltoimage`.chomp
 
 if executable.empty?
-  
-  binary =  case RUBY_PLATFORM
-            when /linux/
-              'wkhtmltoimage-linux-i386-0.10.0'
-            when /darwin/
-              'wkhtmltoimage-osx-i386-0.10.0'
-            else
-              raise "No bundled binaries found for your system. Please install wkhtmltopdf."
-            end
-  executable = File.join(File.dirname(__FILE__), binary)
-
+  executable = File.join(File.dirname(__FILE__), WkhtmlImageExecutable.new.binary_wkhtmltoimage)
 end
 
 arguments = $*.map { |arg| arg.include?(' ') ? %Q("#{arg}") : arg }
