@@ -29,7 +29,7 @@ describe WebSnap::Snapper do
 
     it "should provide default options" do
       websnap = WebSnap::Snapper.new('<h1>Oh Hai</h1>')
-      ['--crop-w', '--crop-h', '--crop-x', '--crop-y', '--format'].each do |option|
+      ['--format'].each do |option|
         websnap.options.should have_key(option)
       end
     end
