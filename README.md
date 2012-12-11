@@ -32,6 +32,12 @@ Create snapshot of webpage. Uses [wkhtmltoimage](http://github.com/antialize/wkh
     kit = WebSnap::Snapper.new('http://google.com')
     kit = WebSnap::Snapper.new(File.new('/path/to/html'))
 
+## Changes
+
+### 0.1.5
+
+- Added supports on x86_64 platform, thanks @willywos for the [PR](https://github.com/siuying/websnap/pull/6)
+
 ## Attributions
 
 * This application use wkhtmltoimage as backend

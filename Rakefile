@@ -4,7 +4,7 @@ require 'echoe'
 require 'rake'
 require 'rspec/core/rake_task'
 
-Echoe.new("websnap", "0.1.4") do |p|
+Echoe.new("websnap", "0.1.5") do |p|
   p.author = "Francis Chong"
   p.description = "Create snapshot of webpage"
   p.url = "http://github.com/siuying/websnap"
