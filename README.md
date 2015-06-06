@@ -9,7 +9,7 @@ Create snapshot of webpage. Uses [wkhtmltoimage](http://github.com/antialize/wkh
   * WebSnap comes bundled with wkhtmltoimage binaries for Linux i386 (OSX i386 will be bundled, when it is available from [wkhtmltopdf] site)
   * WebSnap defaults to user installed versions of wkhtmltoimage if found
   * Installing wkhtmltoimage binary
-  * Download the latest binary from http://code.google.com/p/wkhtmltopdf/downloads/list
+  * Download the latest binary from https://github.com/wkhtmltopdf/wkhtmltopdf
   * Place the binary somewhere on your path (e.g /usr/local/bin)
 
 2. Install WebSnap
