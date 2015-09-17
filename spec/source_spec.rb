@@ -8,6 +8,21 @@ describe WebSnap::Source do
       source.should be_url
     end
     
+    it "should return true if passed a url like a single-quoted string" do
+      source = WebSnap::Source.new("'http://google.com'")
+      source.should be_url
+    end
+    
+    it "should return true if passed a url like a double-quoted string" do
+      source = WebSnap::Source.new("\"http://google.com\"")
+      source.should be_url
+    end
+    
+    it "should return true if passed a url like a double-quoted and single-quoted string" do
+      source = WebSnap::Source.new("\"'http://google.com'\"")
+      source.should be_url
+    end
+    
     it "should return false if passed a file" do
       source = WebSnap::Source.new(File.new(__FILE__))
       source.should_not be_url
