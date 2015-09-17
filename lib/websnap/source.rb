@@ -7,7 +7,7 @@ module WebSnap
     end
     
     def url?
-      @source.is_a?(String) && @source.match(/^http/)
+      @source.is_a?(String) && @source.match(/^(http)|^(\"http)|^(\'http)/)
     end
     
     def file?
