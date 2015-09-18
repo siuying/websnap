@@ -7,8 +7,7 @@ executable = `which wkhtmltoimage`.chomp
 if executable.empty?
   executable = File.join(File.dirname(__FILE__), WkhtmlImageExecutable.new.binary_wkhtmltoimage)
 end
-puts "Ruby args: "
-puts $*
+
 arguments = $*.map { |arg| arg.include?(' ') ? %Q("#{arg}") : arg }
-puts "Parsed args: " + executable + " " + arguments.join(" ")
-#system(executable + " " + arguments.join(" "))
+
+system(executable + " " + arguments.join(" "))
